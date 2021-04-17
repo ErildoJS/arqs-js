@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //IMC
+        var name = prompt('type ypur name: ')
+        var tall = prompt('type your tall on centimeters: ')
+        var weight = prompt('type your weight: ')
+
+        tall = parseFloat(tall)
+        weight = parseFloat(weight)
+
+        tall = tall / 100 //convertendo centimetros para metros
+        var M = weight / (tall * tall)
+        //parseFloat(M)
+        if (M < 16) {
+            var clas = 'baixo peso muito grave'
+            document.write('<h1 style="color: red">'+ name+ ' possui índice de massa corporal igual a '+ M +', sendo classificado como '+ clas+'.</h1>')
+        } else if (M >= 16 && M <= 16,99) {
+            var clas = 'baixo peso grave'
+            document.write('<h1 style="color: red">'+ name+ ' possui índice de massa corporal igual a '+ M +', sendo classificado como '+ clas+'.</h1>')
+            
+        }else if (M >= 17 && M <= 18,49) {
+            var clas = 'muito baixo'
+            document.write('<h1 style="color: red">'+ name+ ' possui índice de massa corporal igual a '+ M +', sendo classificado como '+ clas+'.</h1>')
+            
+        }else if (M >=  18,50 && M <= 24,99) {
+            var clas = 'peso normal'
+            document.write('<h1 style="color: red">'+ name+ ' possui índice de massa corporal igual a '+ M +', sendo classificado como '+ clas+'.</h1>')
+            
+        }else if (M >= 25 && M <= 29,99) {
+            var clas = 'Sobrepeso'
+            document.write('<h1 style="color: red">'+ name+ ' possui índice de massa corporal igual a '+ M +', sendo classificado como '+ clas+'.</h1>')
+            
+        }else if (M >=  30 && M <= 34,99) {
+            var clas = 'obesidade grau 1'
+            document.write('<h1 style="color: red">'+ name+ ' possui índice de massa corporal igual a '+ M +', sendo classificado como '+ clas+'.</h1>')
+            
+            
+        }else if (M >=  35 && M <= 39,99) {
+            var clas = 'obesidade grau 2'
+            document.write('<h1 style="color: red">'+ name+ ' possui índice de massa corporal igual a '+ M +', sendo classificado como '+ clas+'.</h1>')
+            
+            
+        }else if (M >= 40) {
+            var clas = 'obesidade grau 3'
+            document.write('<h1 style="color: red">'+ name+ ' possui índice de massa corporal igual a '+ M +', sendo classificado como '+ clas+'.</h1>')
+            
+            
+        }
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

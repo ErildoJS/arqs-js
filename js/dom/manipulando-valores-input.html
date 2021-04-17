@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function carac() {
+
+        //pegar o valor digiatdo pelo input
+        //os valores pegados do input sao strings
+        var caractere = document.getElementById('getin').value
+
+
+        //eliminando o valor digitado
+        document.getElementById('getin').value = ''
+        caractere.trim()
+
+        switch (caractere) {
+            case '1':  
+            case '2':
+            case '3':
+            case '4':
+            case '5':
+            case '6':
+            case '7':
+            case '8':
+            case '9':
+                //add o caractere no campo numeros
+                //atribuir o caractere com valor pro campo
+
+                //essa forma é para nao eliminar o ultimo valor:
+                //document.getElementById('numberr').value += caractere 
+                document.getElementById('numberr').value = caractere 
+                break;
+            default:
+                //add o caractere no campo letras
+                document.getElementById('word').value = caractere
+        }
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="getin" placeholder="digite um valor aqui" onkeyup="carac()">
+
+    <hr />
+    <input type="text" disabled id="numberr">
+    <input type="text" disabled id="word">
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function exbirArgtigo(id, cbSuccesso, cbErro) {
+            if (false) {
+                cbSuccesso('funcoes de callback em js', 'cb sao muito usadas no dia a dia')
+            }else {
+                cbErro('erro ao recuperar os dados')
+            }
+            
+        }
+
+        var cbSuccesso = function(titulo, descrisao) {
+                document.write('<h1>' +  titulo +'</h1>')
+                document.write('<hr />')
+                document.write('<p>' +  descrisao +'</p>')
+            }
+
+            var cbErro = function (erro) {
+                document.write('<p>' +  erro +'</p>')
+                
+            }
+
+        exbirArgtigo(1, cbSuccesso, cbErro)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

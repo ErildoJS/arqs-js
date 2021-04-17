@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        /*
+        encapsula um determinado codigo, com obj bem definido, para reutilizala
+            funcoes-tbm chamadas de subprogramas dos nossos programas
+
+            () - parametros ou argumentos
+
+            tipo void - quando chamada vai apenas processar algo
+            tipo return  - quando chamada alem processar algo, ela dara um retorno de um valor pre definido
+
+            o retorno da funcao pode ser associado a uma variavel
+
+            o interpretador js , quando vai executar o script primeiro procura as funcoes
+            para alocalas em memoria, pra depois de fato ler o script
+
+            escopro de variaveis {
+
+            }
+
+
+
+            particularidades das funcoes js {
+                se passamos mais argumentos do que a funcao esta a espera , a funcao nao quebra
+            }
+
+
+            Escopos da funcao {
+
+                global - escopo do script como um todo
+                funcao - corresponde a um conteudo inserido dentro do bloco da funcao
+                bloco - instrucaoes contidas dentro de por ex: if
+
+
+
+                dentro do escopo de blocos eu tenho acesso a variaveis declaradas no escopo global
+
+                dentro do escopo de funcoes eu tenho acesso a variaveis declaradas no escopo global
+
+
+                
+                dentro do escopo de funcoes eu tenho acesso a variaveis declaradas no escopo global
+
+                variaveis declaradas dentro do escopo de bloco sao acessadas dentro do escopo global
+
+                variaveis declaradas dentro do escopo de bloco sao acessadas dentro do escopo funcao
+
+                variaveis declaradas dentro das funcoes nao sofrem hoisting, ou seja o escopo global e de bloco
+                nao tenhem acesso
+
+                
+                
+            }
+        */
+
+
+        function calcularAreaRetangulo(largura, comprimento) {
+            var area = largura * comprimento
+
+            //document.write(area)
+            return 38
+        }
+        document.write(calcularAreaRetangulo(3,7))
+        
+
+        //o retorno da funcao pode ser associado a uma variavel
+
+        var func = calcularAreaRetangulo(2,4)
+        // -----------------------------------------------------
+
+
+        function calcularAreaRetangulo(largura, comprimento) {
+            var area = largura * comprimento
+
+            //document.write(area)
+            return 38
+        }
+
+        var larg = prompt('largura: ')
+        var comp = prompt('comprimento: ')
+        var func = calcularAreaRetangulo(larg, comp)
+        document.write(func)
+
+
+        //funcoes anonimas - funcoes que nao possuem nome
+        //function () {
+          //  document.write('anonimato')
+        //}
+
+        //tecnica de wrapper - atribuir uma funcao anonima a uma variavel
+        var showw = function () {
+            document.write('anonimato')
+        }
+
+        showw()
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

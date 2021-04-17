@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        /*
+            valores nativos com string por si so nao possuem propriedades
+            ou metodos
+
+
+            so que quando executados pelo js ele transforma em obj
+            e agrega propriedades e metodos
+        */
+
+        //propriedade ou atributo length - conta a string
+
+        document.write('erildo patricio'.length)
+
+        //metodo charAt() - retorna um caractere com base na posicao dele na strg
+        document.write('erildo patricio'.charAt(8))
+
+
+        //metodo indexOf() - retorna  a primeira ocorrencia de um caractere dentro da string
+        var name = 'erildo'
+
+        document.write(name.indexOf('i'))
+
+
+        //metodo replace() - substitui uma string por outra
+        document.write(name.replace('erildo', 'patricio'))
+
+
+        //metodo substr - permite extrair parte de uma string, com base
+        //num valor inicial e com base numa quant de valores da posicao inicial 
+        //de caracteres
+
+
+        var name2 = 'erildopatricio'
+
+        document.write(name2.substr(2, 8))
+
+
+        //toLowerCase()
+
+
+        //toUpperCase()
+
+        //metodo trim() - remove espacos nas strings
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

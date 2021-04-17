@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        //o evento onresize é usados na tag body
+        //onresize - executado quando a janela sofre redirecionamento
+
+        //onscroll - usado em qualquer elemento com scroll
+        function acao() {
+            console.log('executado')
+        }
+    </script>
+</head>
+<body onresize="acao()" onscroll="console.log('evento clicado')">
+    <div style="width: 124px; height: 3000px; background-color: #ccc;"></div>
+</body>
+</html>

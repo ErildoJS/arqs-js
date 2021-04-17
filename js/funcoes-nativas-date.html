@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        var data = new Date()
+
+        //dia do mes
+        document.write(data.getDate())
+
+        //mes
+        //vai de 0 ate 11
+        document.write(data.getMonth() + 1)
+
+
+        //ano
+        document.write(data.getFullYear())
+
+        //convertendo a data em string
+        document.write(data.toString())
+
+        document.write('<hr />')
+        //add dias
+        document.write(data.setDate(data.getDate() + 1))
+        document.write(data.toString())
+
+        //remove dias
+        document.write(data.setDate(data.getDate() - 1))
+        document.write(data.toString())
+
+        //add mes
+        document.write(data.setMonth(data.getMonth() + 1))
+        document.write(data.toString())
+
+        //remove mes
+        document.write(data.setMonth(data.getMonth() - 1))
+        document.write(data.toString())
+
+        //add ano
+        document.write(data.setFullYear(data.getFullYear() + 1))
+        document.write(data.toString())
+
+        //remove ano
+        document.write(data.setFullYear(data.getFullYear() - 1))
+        document.write(data.toString())
+
+
+        //calculo entre duas datas between
+        //ex: calculando quantas dias tem entre as datas
+        //15/01/2017 e 23/02/2017
+        //1 - 
+        var date1 = new Date(2017, 0, 15)
+
+        var date2 = new Date(2017, 1, 23)
+        document.write(date1.toString())
+        document.write('<hr />')
+        document.write(date2.toString())
+
+        //como nao podemos calcular as datas pk estao em string
+        //devemos converte las 
+        //pra isso podemos usar o metodo getTime()
+        //que recupera o valor em milisegundos da data de 01/01/1970
+        //ate a data em questao
+
+        document.write('<hr />')
+        document.write(date1.getTime())
+        document.write('<hr />')
+        document.write(date2.getTime())
+
+        //agora vamos descobri quantos milisegundos existe entre uma data
+        //e outra
+        //usando a subtracao entre uma e outra
+        //dica: o abs retorna o valor absoluto ou seja positivo
+        document.write('<hr />')
+        var med = Math.abs(date1.getTime() - date2.getTime())
+        document.write(med)
+        document.write('<hr />')
+
+
+        //agor é descobrie quantas quantidades de dias representa 
+        //esse valor em milllisegundos
+        //dica: achar o milisegundos de um dia (1*24*60*60*1000)
+        //agora vamos dividir o valor de millisegundos que ja temos com 
+        //o valor de millisegundos de um dia
+        var mdud = (1*24*60*60*1000)
+
+        document.write(Math.ceil(med / mdud))
+
+       
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
